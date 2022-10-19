@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <Nav>
         {/* <i class="fa-solid fa-bookmark"></i> */}
-        📖 오늘의 책
+        📖 오늘의 책 입니다.
       </Nav>
     </header>
   );
