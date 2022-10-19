@@ -75,7 +75,6 @@ const bookSlice = createSlice({
     },
 
     updatePost: (state, action) => {
-      console.log(action.payload);
       state.posts = state.posts.map(post =>
         post.id === action.payload.id ? action.payload : post
       );

@@ -19,7 +19,6 @@ const PostList = () => {
       <FR>
         {posts.map(post => {
           const { name, title, body, id } = post;
-          console.log(id);
           return (
             <PostItem key={id} id={id} name={name} title={title} body={body} />
           );

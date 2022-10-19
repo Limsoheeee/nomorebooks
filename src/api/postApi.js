@@ -21,6 +21,5 @@ export const delPostApi = async id => {
 };
 
 export const updatePostApi = async post => {
-  console.log("api에서 받아온 payload", post);
   await axios.put(`${BASE_URL}/posts/${post.id}`, post);
 };
