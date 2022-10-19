@@ -56,7 +56,8 @@ const bookSlice = createSlice({
   initialState,
   reducers: {
     createReview: (state, action) => {
-      const id = state[state.length - 1]?.id + 1 || 1;
+      const id = state.posts[state.posts.length - 1]?.id + 1 || 1;
+      //id가 만들어지는 곳에서 state.posts 안했다
       // db 저장과는 별개로 state를 관리한다. 통신은 적을수록 좋기 때문
       state.posts.push({ ...action.payload, id });
     },
@@ -74,11 +75,11 @@ const bookSlice = createSlice({
     },
 
     updatePost: (state, action) => {
-      console.log("action.payload", action.payload);
-      console.log("state.posts", state.posts);
+      console.log(action.payload);
       state.posts = state.posts.map(post =>
         post.id === action.payload.id ? action.payload : post
       );
+      state.post = { ...state.post, ...action.payload };
     },
   },
 });

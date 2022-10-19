@@ -40,6 +40,7 @@ const PostForm = () => {
             placeholder="책 이름"
             onChange={onChangeHandler}
           ></input>
+          {/* childern 안들어가면 지움 */}
           <input
             value={review.name || ""}
             name={"name"}
